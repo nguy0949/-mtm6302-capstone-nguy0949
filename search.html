@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/search.css" />
+    <link rel="stylesheet" href="./css/search.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <title>Meteor</title>
@@ -24,9 +24,9 @@
         <div class="main-container">
             <div class="search-image">
                 <div class="image-wrapper">
-                    <img src="./images/" alt="search image" />
+                    <img id="image" src="./images/" alt="search image" />
                     <div class="like-icon">
-                        <img src="https://www.freeiconspng.com/thumbs/heart-png/heart-png-15.png">
+                        <img id="like" src="https://www.freeiconspng.com/thumbs/heart-png/heart-png-15.png">
                     </div>
                 </div>
             </div>
@@ -37,20 +37,40 @@
                 </div>
                 <div class="text-row">
                     <h2>Title</h2>
-                    <span>A falling stars</span>
+                    <span id="title"></span>
                 </div>
                 <div class="explain-text">
                     <h2>Explaination</h2>
-                    <span>
-                        As nothing at all to do with a star! These amazing streaks of lights you can sometimes 
-                        seen in the night sky are caused
-                    </span>
+                    <span id="explaination"></span>
                 </div>
             </div>
-            <div class="btn d-flex justify-content-center mt-3">
-                <button type="button" class="btn btn-danger">My favourite images</button>
+            <div class="d-flex flex-column gap-2 justify-content-center mt-3">
+                <a href="/index.html" class="btn btn-danger">Find another image</a>
+                <a href="/my-images.html" class="btn btn-danger">My favourite images</a>
+            </div>
+            <!-- Button trigger modal -->
+            <button type="button" id="toggle" class="btn d-none" data-bs-toggle="modal" data-bs-target="#imageModal">
+                Launch demo modal
+            </button>
+            <!-- Modal -->
+            <div class="modal fade modal-lg" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="hd-image" src="" alt="Not found" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/search.js" />
 </body>
 </html>

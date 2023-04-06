@@ -32,9 +32,18 @@
 .image-wrapper {
     width: 100%;
     background-color: #625d52;
-    height: 300px;
     margin-bottom: 40px;
     position: relative;
+}
+#image {
+    width: 100%;
+}
+#image:hover {
+    cursor: pointer;
+}
+
+#hd-image {
+    width: 100%;
 }
 
 .like-icon > img {
@@ -43,6 +52,10 @@
     position: absolute;
     bottom: -30px;
     right: 50%;
+}
+
+#like:hover {
+    cursor: pointer;
 }
 
 .text-row {

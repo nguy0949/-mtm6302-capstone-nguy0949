@@ -47,6 +47,10 @@
     background-color: #625d52;
 }
 
+.remove-icon:hover {
+    cursor: pointer;
+}
+
 @media screen and (min-width: 650px) {
     .saved-images {
         max-width: 1000px;
